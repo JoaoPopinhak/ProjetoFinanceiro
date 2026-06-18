@@ -1,8 +1,6 @@
 package Teste;
 
 
-
-import application.usecase.MovimentacaoUseCase.DeletarMovimentacaoUseCase;
 import infrastructure.persistence.JpaContaRepository;
 import infrastructure.persistence.JpaMovimentacaoRepository;
 import infrastructure.persistence.JpaUtil;
@@ -13,9 +11,10 @@ public class TesteUseCase {
 	public static void main(String[] args) {
 		
 		EntityManagerFactory emf = JpaUtil.getEntityManagerFactory();
-		
+
 		JpaMovimentacaoRepository repositoryMovimentacao = new JpaMovimentacaoRepository(emf);
 		JpaContaRepository repositoryConta = new JpaContaRepository(emf);
+
 		//MovimentacaoContaUseCase movimentacao = new MovimentacaoContaUseCase(repositoryConta, repositoryMovimentacao);
 		//movimentacao.novaMovimentacao(TipoMovimentacao.RECEITA, new BigDecimal(5000), null, 1L, null, "Teste");
 
@@ -28,8 +27,8 @@ public class TesteUseCase {
 		//DeletarContaUseCase deletarConta = new DeletarContaUseCase(repositoryConta, repositoryMovimentacao);
 		//deletarConta.deletarConta(1L);
 		
-		DeletarMovimentacaoUseCase deletarMovimentacao = new DeletarMovimentacaoUseCase(repositoryConta, repositoryMovimentacao);
-		deletarMovimentacao.deletarMovimentacao(4L);
+		//DeletarMovimentacaoUseCase deletarMovimentacao = new DeletarMovimentacaoUseCase(repositoryConta, repositoryMovimentacao);
+		//deletarMovimentacao.deletarMovimentacao(4L);
 		
 		//AtualizarMovimentacaoUseCase atualizarMovimentacao = new AtualizarMovimentacaoUseCase(repositoryConta, repositoryMovimentacao);
 		//atualizarMovimentacao.atualizarMovimentacao(4L, TipoMovimentacao.DESPESA, null, null, 4L, null, "TESTE MODIFICACAO");
